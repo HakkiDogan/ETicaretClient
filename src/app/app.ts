@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AdminModule } from './admin/admin-module';
+import { UiModule } from './ui/ui-module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [AdminModule, UiModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected title = 'ETicaretClient';
