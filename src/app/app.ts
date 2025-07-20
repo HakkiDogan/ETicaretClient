@@ -3,6 +3,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { AdminModule } from './admin/admin-module';
 import { UiModule } from './ui/ui-module';
 
+declare var $: any;
+
 @Component({
   selector: 'app-root',
   imports: [RouterModule, RouterOutlet, AdminModule, UiModule],
@@ -12,3 +14,7 @@ import { UiModule } from './ui/ui-module';
 export class App {
   protected title = 'ETicaretClient';
 }
+
+$(document).ready(() => {
+  alert("jQuery is ready");
+});
